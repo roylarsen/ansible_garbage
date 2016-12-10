@@ -1,0 +1,17 @@
+# Basic boxen setup.
+# Base packages, users, ssh keys
+
+- name: install git
+  yum: 
+    name: git
+    state: latest
+
+- name: install epel
+  yum: 
+    name: epel-release
+    state: latest
+
+- name: create rlarsen
+  user:
+    name: rlarsen
+    shell: /bin/bash

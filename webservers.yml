@@ -1,0 +1,6 @@
+---
+- hosts: pubweb
+  remote_user: root
+  roles:
+    - base
+    - nginx
