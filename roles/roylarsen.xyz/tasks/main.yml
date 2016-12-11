@@ -1,0 +1,11 @@
+---
+- name: create webdir
+  file:
+    path: /var/www
+    state: directory
+    mode: 755
+
+- name: clone website
+  git:
+    repo: https://github.com/roylarsen/www.roylarsen.xyz.git
+    dest: /var/www
